@@ -15,27 +15,38 @@ const generateBtn = document.querySelector(".generateButton");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
 const symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/';
+
+// initially
 let password = "";
 let passwordLength = 10;
-
 // let one condition be checked by default, so the count will be 1
+let checkCount = 0;
+handleSlider;                  // handleSlider();
+
 uppercaseCheck.checked = true;
 
-let checkCount = 1;
+
 // set strength circle color to grey
+setIndicator("#ccc");                // function build below
 
-
-// handleSlider();
 // set password
 function handleSlider() {
     inputSlider = passwordLength;
     lengthDisplay.innerText = passwordLength;
+
+    // slider k left aaur right part k coloring k lia
+    // jaha tak slider hai waha tak, purple color aaur uske aage default set color
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+
+    inputSlider.style.backgroundSize = ( (passwordLength - min)*100 / (max-min)) + "% 100%";
 }
 
 
 function setIndicator(color) {
     indicator.style.backgroundColor = color;
     // shadow
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 function getRndInteger(min, max) {

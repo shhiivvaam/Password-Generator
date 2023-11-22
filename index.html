@@ -25,8 +25,8 @@
             <input readonly type="text" placeholder="Password" class="display" data-passworddisplay />
             <!-- data-passwordDisplay -->
 
-            <button title="button" data-copy>
-                <span data-copymsg></span> <!-- data-copyMsg -->
+            <button class="copyBtn" title="button" data-copy>
+                <span class="tooltip" data-copymsg></span> <!-- data-copyMsg -->
                 <img src="./copy.svg" alt="Copy Image" width="23" height="23">
             </button>
         </div>
@@ -44,19 +44,19 @@
             <!-- data-lengthSlider -->
 
             <!-- checkboxes -->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase" title="checkbox" />
                 <label for="uppercase">Includes Uppercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase" title="checkbox" />
                 <label for="lowercase">Includes Uppercase letters</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers" title="checkbox" />
                 <label for="numbers">Includes Numbers</label>
             </div>
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols" title="checkbox" />
                 <label for="symbols">Includes Symbols</label>
             </div>
@@ -64,7 +64,7 @@
             <!-- strength section -->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" class="check" data-indicator></div>
             </div>
 
             <!-- Generate Password button -->
